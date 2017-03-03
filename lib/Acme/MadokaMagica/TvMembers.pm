@@ -6,12 +6,18 @@ use utf8;
 use Data::Section::Simple;
 use YAML::Tiny;
 
+has has_qb => (
+    is => 'rw',
+    isa => 'Bool',
+    required => 1,
+    default => 0,
+);
 
 no Mouse;
 
 sub name {
     my ($self) = @_;
-    return $self->lastname . ' ' .$self->firstname;
+    return $self->has_qb ? $self->{witchename}:$self->lastname . ' ' .$self->firstname;
 }
 
 sub firstname {
@@ -27,6 +33,21 @@ sub lastname {
 sub age {
     my $self = shift;
     return $self->{age};
+}
+
+sub color{
+    my ($self) = @_;
+    return $self->has_qb ? "black" :$self->{color} ;
+}
+
+sub qb {
+    my ($self) = @_;
+    $self->has_qb(1);
+}
+
+sub say {
+    my ($self) = @_;
+    return $self->{say};
 }
 
 sub cv{
