@@ -5,7 +5,40 @@ use warnings;
 
 our $VERSION = "0.01";
 
+use Readonly;
 
+Readonly our $HollyQuintet => [
+    "KanameMadoka",
+    "TomoeMami",
+    "SakuraKyoko",
+    "MikiSayaka",
+    "AkemiHomura",
+];
+
+Readonly our $MainMembers => [
+    @$HollyQuintet,
+];
+
+sub main_members {
+    my $self = shift;
+    return $self->members_of($MainMembers,caller 2);
+}
+
+sub members_of {
+
+    my ($self,$team,$line) = @_;
+    my @members;
+
+    for my $member_name (@{ $team }){
+
+        my $pkg = "Acme::MadokaMagica::TvMembers::$member_name";
+        if (eval "require $pkg;1;"){
+            push @members,$pkg->new($line);
+        }
+    }
+
+    return @members;
+}
 
 1;
 __END__
