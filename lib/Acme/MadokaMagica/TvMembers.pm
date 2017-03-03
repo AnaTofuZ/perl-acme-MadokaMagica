@@ -46,5 +46,6 @@ sub BUILD{
             $self->{$key} = $member_info->{$key};
          }
       }
+        $self->{startline} = $args;
 
 }

@@ -7,17 +7,34 @@ our $VERSION = "0.01";
 
 use Readonly;
 
-Readonly our $HollyQuintet => [
-    "KanameMadoka",
-    "TomoeMami",
+Readonly our $KyoSaya => [
     "SakuraKyoko",
     "MikiSayaka",
+];
+
+Readonly our $MadoHomu => [
+    "KanameMadoka",
     "AkemiHomura",
+];
+
+Readonly our $Alone => [
+    "TomoeMami",
+];
+
+Readonly our $HollyQuintet => [
+    @$MadoHomu,
+    @$Alone,
+    @$KyoSaya,
 ];
 
 Readonly our $MainMembers => [
     @$HollyQuintet,
 ];
+
+sub alone_members{
+    my $self = shift;
+    return $self->members_of($Alone,caller 2);
+}
 
 sub main_members {
     my $self = shift;
