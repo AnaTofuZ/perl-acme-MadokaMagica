@@ -1,6 +1,6 @@
-package Acme::MadokaMagica::TvCharacters::AkemiHomura;
+package Acme::MadokaMagica::TvMembers::AkemiHomura;
 use Mouse;
-extends 'Acme::MadokaMagica::TvCharacters';
+extends 'Acme::MadokaMagica::TvMembers';
 use utf8;
 
 no Mouse;

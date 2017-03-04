@@ -52,6 +52,20 @@
       }
    },
    "release_status" : "unstable",
+   "resources" : {
+      "bugtracker" : {
+         "web" : "https://github.com/AnaTofuZ/perl-acme-MadokaMagica/issues"
+      },
+      "homepage" : "https://github.com/AnaTofuZ/perl-acme-MadokaMagica",
+      "repository" : {
+         "type" : "git",
+         "url" : "git://github.com/AnaTofuZ/perl-acme-MadokaMagica.git",
+         "web" : "https://github.com/AnaTofuZ/perl-acme-MadokaMagica"
+      }
+   },
    "version" : "0.01",
+   "x_contributors" : [
+      "AnaTofuZ <e155730@ie.u-ryukyu.ac.jp>"
+   ],
    "x_serialization_backend" : "JSON::PP version 2.27300"
 }

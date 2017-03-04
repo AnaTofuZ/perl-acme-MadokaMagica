@@ -33,12 +33,14 @@ Readonly our $MainMembers => [
 
 sub alone_members{
     my $self = shift;
-    return $self->members_of($Alone,caller 2);
+    my $line = (caller)[2];
+    return $self->members_of($Alone,$line);
 }
 
 sub main_members {
     my $self = shift;
-    return $self->members_of($MainMembers,caller 2);
+    my $line = (caller)[2];
+    return $self->members_of($MainMembers,$line);
 }
 
 sub members_of {

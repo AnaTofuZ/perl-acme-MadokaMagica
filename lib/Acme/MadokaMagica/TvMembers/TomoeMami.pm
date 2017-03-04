@@ -1,6 +1,6 @@
-package Acme::MadokaMagica::TvCharacters::TomoeMami;
+package Acme::MadokaMagica::TvMembers::TomoeMami;
 use Mouse;
-extends 'Acme::MadokaMagica::TvCharacters';
+extends 'Acme::MadokaMagica::TvMembers';
 use utf8;
 
 no Mouse;
@@ -18,4 +18,4 @@ blood_type: O
 cv: 水橋かおり
 say: ティロ・フィナーレ!!
 witchename: Candeloro
-color:yellow
+color:　yellow

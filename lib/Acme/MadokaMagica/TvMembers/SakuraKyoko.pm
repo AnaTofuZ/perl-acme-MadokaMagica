@@ -1,6 +1,6 @@
-package Acme::MadokaMagica::TvCharacters::SakuraKyoko;
+package Acme::MadokaMagica::TvMembers::SakuraKyoko;
 use Mouse;
-extends 'Acme::MadokaMagica::TvCharacters';
+extends 'Acme::MadokaMagica::TvMembers';
 use utf8;
 
 no Mouse;

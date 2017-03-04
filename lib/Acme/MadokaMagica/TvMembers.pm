@@ -17,41 +17,113 @@ no Mouse;
 
 sub name {
     my ($self) = @_;
+    my $line = (caller)[2];
+
+    my $limit = $self->{startline} +100;
+    if($line >= $limit ){
+        return undef;
+    }
     return $self->has_qb ? $self->{witchename}:$self->lastname . ' ' .$self->firstname;
 }
 
 sub firstname {
     my $self = shift;
+    my $line = (caller)[2];
+
+    my $limit = $self->{startline} +100;
+    if($line >= $limit ){
+        return undef;
+    }
     return $self->{firstname};
+}
+
+sub birthday {
+    my $self = shift;
+    my $line = (caller)[2];
+
+    my $limit = $self->{startline} +100;
+    if($line >= $limit ){
+        return undef;
+    }
+    return $self->{birthday};
+}
+
+sub blood_type {
+    my $self = shift;
+    my $line = (caller)[2];
+
+    my $limit = $self->{startline} +100;
+    if($line >= $limit ){
+        return undef;
+    }
+    return $self->{blood_type};
 }
 
 sub lastname {
     my $self = shift;
+    my $line = (caller)[2];
+
+    my $limit = $self->{startline} +100;
+    if($line >= $limit ){
+        return undef;
+    }
     return $self->{lastname};
 }
 
 sub age {
     my $self = shift;
+    my $line = (caller)[2];
+
+    my $limit = $self->{startline} +100;
+    if($line >= $limit ){
+        return undef;
+    }
     return $self->{age};
 }
 
 sub color{
     my ($self) = @_;
+    my $line = (caller)[2];
+
+    my $limit = $self->{startline} +100;
+    if($line >= $limit ){
+        return undef;
+    }
+
     return $self->has_qb ? "black" :$self->{color} ;
 }
 
 sub qb {
     my ($self) = @_;
+    my $line = (caller)[2];
+
+    my $limit = $self->{startline} +100;
+    if($line >= $limit ){
+        return undef;
+    }
+
     $self->has_qb(1);
 }
 
 sub say {
     my ($self) = @_;
+    my $line = (caller)[2];
+
+    my $limit = $self->{startline} +100;
+    if($line >= $limit ){
+        return undef;
+    }
     return $self->{say};
 }
 
 sub cv{
     my $self = shift;
+    my $line = (caller)[2];
+
+    my $limit = $self->{startline} +100;
+    if($line >= $limit ){
+        return undef;
+    }
     return $self->{cv};
 }
 
@@ -70,3 +142,5 @@ sub BUILD{
         $self->{startline} = $args;
 
 }
+
+1;
