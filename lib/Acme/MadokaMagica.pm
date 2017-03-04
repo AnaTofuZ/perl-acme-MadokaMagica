@@ -2,6 +2,7 @@ package Acme::MadokaMagica;
 use 5.008001;
 use strict;
 use warnings;
+use utf8;
 
 our $VERSION = "0.02";
 
@@ -27,6 +28,10 @@ Readonly our $HollyQuintet => [
     @$KyoSaya,
 ];
 
+Readonly our $AloneMembers => [
+    @$Alone,
+];
+
 Readonly our $MainMembers => [
     @$HollyQuintet,
 ];
@@ -34,7 +39,7 @@ Readonly our $MainMembers => [
 sub alone_members{
     my $self = shift;
     my $line = (caller)[2];
-    return $self->members_of($Alone,$line);
+    return $self->members_of($AloneMembers,$line);
 }
 
 sub main_members {
