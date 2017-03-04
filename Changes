@@ -2,6 +2,9 @@ Revision history for Perl extension Acme-MadokaMagica
 
 {{$NEXT}}
 
+0.05 2017-03-04T07:00:40Z
+    -   modofy class name
+
 0.04 2017-03-04T06:03:01Z
     - delete line arg
 
