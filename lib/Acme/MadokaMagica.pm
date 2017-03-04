@@ -57,7 +57,7 @@ sub members_of {
 
         my $pkg = "Acme::MadokaMagica::TvMembers::$member_name";
         if (eval "require $pkg;1;"){
-            push @members,$pkg->new($line);
+            push @members,$pkg->new();
         }
     }
 
