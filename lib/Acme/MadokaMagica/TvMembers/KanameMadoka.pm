@@ -1,6 +1,6 @@
-package Acme::MadokaMagica::TvCharacters::KanameMadoka;
+package Acme::MadokaMagica::TvMembers::KanameMadoka;
 use Mouse;
-extends 'Acme::MadokaMagica::TvCharacters';
+extends 'Acme::MadokaMagica::TvMembers';
 use utf8;
 
 no Mouse;

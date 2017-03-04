@@ -1,6 +1,6 @@
-package Acme::MadokaMagica::TvCharacters::MikiSayaka;
+package Acme::MadokaMagica::TvMembers:MikiSayaka;
 use Mouse;
-extends 'Acme::MadokaMagica::TvCharacters';
+extends 'Acme::MadokaMagica::TvMembers';
 use utf8;
 
 no Mouse;
