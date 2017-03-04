@@ -2,6 +2,10 @@ Revision history for Perl extension Acme-MadokaMagica
 
 {{$NEXT}}
 
+0.02 2017-03-04T05:27:39Z
+    - add cpanfile
+
+
 0.01 2017-03-04T05:14:38Z
 
     - original version
