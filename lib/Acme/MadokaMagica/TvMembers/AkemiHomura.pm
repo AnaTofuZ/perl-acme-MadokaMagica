@@ -17,5 +17,5 @@ birthday: 3/12
 blood_type: A
 cv: 斎藤千和
 say: それには及ばないわ
-witchename:Homulilly
-color:purple
+witchename: Homulilly
+color: purple
