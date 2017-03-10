@@ -5,6 +5,7 @@ use Acme::MadokaMagica;
 use Acme::MadokaMagica::TvMembers;
 use Acme::MadokaMagica::TvMembers::TomoeMami;
 use Acme::MadokaMagica::TvMembers::KanameMadoka;
+use Acme::MadokaMagica::TvMembers::MikiSayaka;
 
 use Test::More;
 use utf8;
@@ -12,6 +13,7 @@ use utf8;
 subtest 'Charactors' => sub {
     subtest 'Mami' => sub {
         my $mami = Acme::MadokaMagica::TvMembers::TomoeMami->new;
+        ok ! $mami->has_qb;
         is $mami->name,          '巴 マミ';
         is $mami->firstname,     'マミ';
         is $mami->lastname,      '巴';
@@ -40,6 +42,22 @@ subtest 'Charactors' => sub {
         ok $madoka->qb;
         is $madoka->name,          'Kriemhild_Gretchen';
         is $madoka->color,          'black';
+    };
+
+    subtest 'Sayaka' => sub {
+        my $sayaka = Acme::MadokaMagica::TvMembers::MikiSayaka->new;
+        is $sayaka->name,          '美樹 さやか';
+        is $sayaka->firstname,     'さやか';
+        is $sayaka->lastname,      '美樹';
+        is $sayaka->age,            14;
+        is $sayaka->birthday,      '8/16';
+        is $sayaka->blood_type,    'A';
+        is $sayaka->cv,            '喜多村英梨';
+        is $sayaka->say,            'あたしってほんとバカ';
+        is $sayaka->color,          'Blue';
+        ok $sayaka->qb;
+        is $sayaka->name,          'Oktavia_Von_Seckendorff';
+        is $sayaka->color,          'black';
     };
 };
 

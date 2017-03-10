@@ -1,4 +1,4 @@
-package Acme::MadokaMagica::TvMembers:MikiSayaka;
+package Acme::MadokaMagica::TvMembers::MikiSayaka;
 use Mouse;
 extends 'Acme::MadokaMagica::TvMembers';
 use utf8;
@@ -17,5 +17,5 @@ birthday: 8/16
 blood_type: A
 cv: 喜多村英梨
 say: あたしってほんとバカ
-witchename:Oktavia_Von_Seckendorff
-color:Blue
+witchename: Oktavia_Von_Seckendorff
+color: Blue
