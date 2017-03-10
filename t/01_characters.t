@@ -1,8 +1,10 @@
 use strict;
 use warnings;
+
 use Acme::MadokaMagica;
 use Acme::MadokaMagica::TvMembers;
 use Acme::MadokaMagica::TvMembers::TomoeMami;
+use Acme::MadokaMagica::TvMembers::KanameMadoka;
 
 use Test::More;
 use utf8;
@@ -19,6 +21,19 @@ subtest 'Charactors' => sub {
         is $mami->cv,            '水橋かおり';
         is $mami->say,            'ティロ・フィナーレ!!';
         is $mami->color,          'yellow';
+    };
+
+    subtest 'Madoka' => sub {
+        my $madoka = Acme::MadokaMagica::TvMembers::KanameMadoka->new;
+        is $madoka->name,          '鹿目 まどか';
+        is $madoka->firstname,     'まどか';
+        is $madoka->lastname,      '鹿目';
+        is $madoka->age,            14;
+        is $madoka->birthday,      '10/3';
+        is $madoka->blood_type,    'A';
+        is $madoka->cv,            '悠木碧';
+        is $madoka->say,            'ウェヒヒww';
+        is $madoka->color,          'Pink';
     };
 };
 

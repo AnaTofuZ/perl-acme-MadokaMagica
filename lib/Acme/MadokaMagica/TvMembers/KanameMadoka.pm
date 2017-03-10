@@ -17,5 +17,5 @@ birthday: 10/3
 blood_type: A
 cv: 悠木碧
 say: ウェヒヒww
-witchename:Kriemhild_Gretchen
-color:Pink
+witchename: Kriemhild_Gretchen
+color: Pink
