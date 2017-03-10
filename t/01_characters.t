@@ -21,6 +21,9 @@ subtest 'Charactors' => sub {
         is $mami->cv,            '水橋かおり';
         is $mami->say,            'ティロ・フィナーレ!!';
         is $mami->color,          'yellow';
+        ok $mami->qb;
+        is $mami->name,          'Candeloro';
+        is $mami->color,          'black';
     };
 
     subtest 'Madoka' => sub {
@@ -34,6 +37,9 @@ subtest 'Charactors' => sub {
         is $madoka->cv,            '悠木碧';
         is $madoka->say,            'ウェヒヒww';
         is $madoka->color,          'Pink';
+        ok $madoka->qb;
+        is $madoka->name,          'Kriemhild_Gretchen';
+        is $madoka->color,          'black';
     };
 };
 
