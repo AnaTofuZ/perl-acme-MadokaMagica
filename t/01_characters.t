@@ -26,12 +26,14 @@ subtest 'Charactors' => sub {
         is $mami->say,            'ティロ・フィナーレ!!';
         is $mami->color,          'yellow';
         ok $mami->qb;
+        ok $mami->has_qb;
         is $mami->name,          'Candeloro';
         is $mami->color,          'black';
     };
 
     subtest 'Madoka' => sub {
         my $madoka = Acme::MadokaMagica::TvMembers::KanameMadoka->new;
+        ok ! $madoka->has_qb;
         is $madoka->name,          '鹿目 まどか';
         is $madoka->firstname,     'まどか';
         is $madoka->lastname,      '鹿目';
@@ -42,12 +44,14 @@ subtest 'Charactors' => sub {
         is $madoka->say,            'ウェヒヒww';
         is $madoka->color,          'Pink';
         ok $madoka->qb;
+        ok $madoka->has_qb;
         is $madoka->name,          'Kriemhild_Gretchen';
         is $madoka->color,          'black';
     };
 
     subtest 'Sayaka' => sub {
         my $sayaka = Acme::MadokaMagica::TvMembers::MikiSayaka->new;
+        ok ! $sayaka->has_qb;
         is $sayaka->name,          '美樹 さやか';
         is $sayaka->firstname,     'さやか';
         is $sayaka->lastname,      '美樹';
@@ -58,12 +62,14 @@ subtest 'Charactors' => sub {
         is $sayaka->say,            'あたしってほんとバカ';
         is $sayaka->color,          'Blue';
         ok $sayaka->qb;
+        ok $sayaka->has_qb;
         is $sayaka->name,          'Oktavia_Von_Seckendorff';
         is $sayaka->color,          'black';
     };
 
     subtest 'kyoko' => sub {
         my $kyoko = Acme::MadokaMagica::TvMembers::SakuraKyoko->new;
+        ok ! $kyoko->has_qb;
         is $kyoko->name,          '佐倉 杏子';
         is $kyoko->firstname,     '杏子';
         is $kyoko->lastname,      '佐倉';
@@ -74,12 +80,14 @@ subtest 'Charactors' => sub {
         is $kyoko->say,            '喰うかい?';
         is $kyoko->color,          'Red';
         ok $kyoko->qb;
+        ok $kyoko->has_qb;
         is $kyoko->name,          'Ophelia';
         is $kyoko->color,          'black';
     };
 
     subtest 'homura' => sub {
         my $homura = Acme::MadokaMagica::TvMembers::AkemiHomura->new;
+        ok ! $homura->has_qb;
         is $homura->name,          '暁美 ほむら';
         is $homura->firstname,     'ほむら';
         is $homura->lastname,      '暁美';
@@ -90,6 +98,7 @@ subtest 'Charactors' => sub {
         is $homura->say,            'それには及ばないわ';
         is $homura->color,          'purple';
         ok $homura->qb;
+        ok $homura->has_qb;
         is $homura->name,          'Homulilly';
         is $homura->color,          'black';
     };
