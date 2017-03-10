@@ -18,4 +18,4 @@ blood_type: A
 cv: 野中藍
 say: 喰うかい?
 witchename: Ophelia
-color:Red
+color: Red

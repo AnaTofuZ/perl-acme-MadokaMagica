@@ -6,6 +6,8 @@ use Acme::MadokaMagica::TvMembers;
 use Acme::MadokaMagica::TvMembers::TomoeMami;
 use Acme::MadokaMagica::TvMembers::KanameMadoka;
 use Acme::MadokaMagica::TvMembers::MikiSayaka;
+use Acme::MadokaMagica::TvMembers::SakuraKyoko;
+use Acme::MadokaMagica::TvMembers::AkemiHomura;
 
 use Test::More;
 use utf8;
@@ -58,6 +60,38 @@ subtest 'Charactors' => sub {
         ok $sayaka->qb;
         is $sayaka->name,          'Oktavia_Von_Seckendorff';
         is $sayaka->color,          'black';
+    };
+
+    subtest 'kyoko' => sub {
+        my $kyoko = Acme::MadokaMagica::TvMembers::SakuraKyoko->new;
+        is $kyoko->name,          '佐倉 杏子';
+        is $kyoko->firstname,     '杏子';
+        is $kyoko->lastname,      '佐倉';
+        is $kyoko->age,            14;
+        is $kyoko->birthday,      '6/8';
+        is $kyoko->blood_type,    'A';
+        is $kyoko->cv,            '野中藍';
+        is $kyoko->say,            '喰うかい?';
+        is $kyoko->color,          'Red';
+        ok $kyoko->qb;
+        is $kyoko->name,          'Ophelia';
+        is $kyoko->color,          'black';
+    };
+
+    subtest 'homura' => sub {
+        my $homura = Acme::MadokaMagica::TvMembers::AkemiHomura->new;
+        is $homura->name,          '暁美 ほむら';
+        is $homura->firstname,     'ほむら';
+        is $homura->lastname,      '暁美';
+        is $homura->age,            14;
+        is $homura->birthday,      '3/12';
+        is $homura->blood_type,    'A';
+        is $homura->cv,            '斎藤千和';
+        is $homura->say,            'それには及ばないわ';
+        is $homura->color,          'purple';
+        ok $homura->qb;
+        is $homura->name,          'Homulilly';
+        is $homura->color,          'black';
     };
 };
 
