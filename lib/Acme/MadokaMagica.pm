@@ -36,25 +36,23 @@ Readonly our $MainMembers => [
     @$HollyQuintet,
 ];
 
-sub alone_members{
+sub alone_members {
     my $self = shift;
     my $line = (caller)[2];
-    return $self->members_of($AloneMembers,$line);
+    return $self->members_of($AloneMembers, $line);
 }
 
 sub main_members {
     my $self = shift;
     my $line = (caller)[2];
-    return $self->members_of($MainMembers,$line);
+    return $self->members_of($MainMembers, $line);
 }
 
 sub members_of {
-
-    my ($self,$team,$line) = @_;
+    my ($self, $team, $line) = @_;
     my @members;
 
     for my $member_name (@{ $team }){
-
         my $pkg = "Acme::MadokaMagica::TvMembers::$member_name";
         if (eval "require $pkg;1;"){
             push @members,$pkg->new();
