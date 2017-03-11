@@ -20,7 +20,7 @@ sub name {
     my $line = (caller)[2];
 
     my $limit = $self->{startline} +100;
-    if($line >= $limit ){
+    if( $line >= $limit ) {
         return undef;
     }
     return $self->has_qb ? $self->{witchename}:$self->lastname . ' ' .$self->firstname;
@@ -31,7 +31,7 @@ sub firstname {
     my $line = (caller)[2];
 
     my $limit = $self->{startline} +100;
-    if($line >= $limit ){
+    if($line >= $limit ) {
         return undef;
     }
     return $self->{firstname};
@@ -42,7 +42,7 @@ sub birthday {
     my $line = (caller)[2];
 
     my $limit = $self->{startline} +100;
-    if($line >= $limit ){
+    if($line >= $limit ) {
         return undef;
     }
     return $self->{birthday};
@@ -53,7 +53,7 @@ sub blood_type {
     my $line = (caller)[2];
 
     my $limit = $self->{startline} +100;
-    if($line >= $limit ){
+    if( $line >= $limit ) {
         return undef;
     }
     return $self->{blood_type};
@@ -64,7 +64,7 @@ sub lastname {
     my $line = (caller)[2];
 
     my $limit = $self->{startline} +100;
-    if($line >= $limit ){
+    if( $line >= $limit ) {
         return undef;
     }
     return $self->{lastname};
@@ -75,7 +75,7 @@ sub age {
     my $line = (caller)[2];
 
     my $limit = $self->{startline} +100;
-    if($line >= $limit ){
+    if( $line >= $limit ) {
         return undef;
     }
     return $self->{age};
@@ -86,11 +86,11 @@ sub color{
     my $line = (caller)[2];
 
     my $limit = $self->{startline} +100;
-    if($line >= $limit ){
+    if( $line >= $limit ) {
         return undef;
     }
 
-    return $self->has_qb ? "black" :$self->{color} ;
+    return $self->has_qb ? "black" : $self->{color};
 }
 
 sub qb {
@@ -98,7 +98,7 @@ sub qb {
     my $line = (caller)[2];
 
     my $limit = $self->{startline} +100;
-    if($line >= $limit ){
+    if( $line >= $limit ) {
         return undef;
     }
 
@@ -110,37 +110,36 @@ sub say {
     my $line = (caller)[2];
 
     my $limit = $self->{startline} +100;
-    if($line >= $limit ){
+    if( $line >= $limit ) {
         return undef;
     }
     return $self->{say};
 }
 
-sub cv{
+sub cv {
     my $self = shift;
     my $line = (caller)[2];
 
     my $limit = $self->{startline} +100;
-    if($line >= $limit ){
+    if( $line >= $limit ) {
         return undef;
     }
     return $self->{cv};
 }
 
-sub BUILD{
-      my ($self, $args) = @_;
+sub BUILD {
+    my ($self, $args) = @_;
 
-      my $ds = Data::Section::Simple->new( ref $self );
-      my $sections = $ds->get_data_section;
-      for my $section_name ( keys %{$sections} ) {
-         my $yml = YAML::Tiny->read_string( $sections->{$section_name} );
-         my $member_info = $yml->[0];
-         for my $key ( keys %{$member_info} ) {
+    my $ds = Data::Section::Simple->new( ref $self );
+    my $sections = $ds->get_data_section;
+    for my $section_name ( keys %{$sections} ) {
+        my $yml = YAML::Tiny->read_string( $sections->{$section_name} );
+        my $member_info = $yml->[0];
+        for my $key ( keys %{$member_info} ) {
             $self->{$key} = $member_info->{$key};
-         }
-      }
-        $self->{startline} = $args;
-
+        }
+    }
+    $self->{startline} = $args;
 }
 
 1;
