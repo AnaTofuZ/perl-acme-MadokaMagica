@@ -6,8 +6,7 @@ Acme::MadokaMagica - It's miracles and magic are real module.
 
     use Acme::MadokaMagica;
 
-   my($madoka,$homura,$mami,$kyouko,$sayaka) = Acme::MadokaMagica->main_members;
-
+    my($madoka,$homura,$mami,$kyouko,$sayaka) = Acme::MadokaMagica->main_members;
 
     print $madoka->name;         # '鹿目 まどか';
     print $madoka->firstname;    # 'まどか';
