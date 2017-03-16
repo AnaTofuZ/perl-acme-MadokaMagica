@@ -29,6 +29,7 @@ subtest 'Charactors' => sub {
         ok $mami->has_qb;
         is $mami->name,       'Candeloro';
         is $mami->color,      'black';
+        diag explain $mami;
     };
 
     subtest 'Madoka' => sub {
@@ -88,6 +89,7 @@ subtest 'Charactors' => sub {
     subtest 'homura' => sub {
         my $homura = Acme::MadokaMagica::TvMembers::AkemiHomura->new;
         ok ! $homura->has_qb;
+#        diag explain $homura;
         is $homura->name,       '暁美 ほむら';
         is $homura->firstname,  'ほむら';
         is $homura->lastname,   '暁美';

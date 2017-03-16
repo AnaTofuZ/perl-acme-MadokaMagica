@@ -18,4 +18,4 @@ blood_type: O
 cv: 水橋かおり
 say: ティロ・フィナーレ!!
 witchename: Candeloro
-color:　yellow
+color: yellow

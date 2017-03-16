@@ -139,7 +139,11 @@ sub BUILD {
             $self->{$key} = $member_info->{$key};
         }
     }
-    $self->{startline} = $args;
+    if (defined $args->{line}) {
+        $self->{startline} = $args->{line};
+    } else {
+        $self->{startline} = 0;
+    }
 }
 
 1;
