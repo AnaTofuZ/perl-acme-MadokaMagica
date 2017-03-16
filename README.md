@@ -6,30 +6,29 @@ Acme::MadokaMagica - It's miracles and magic are real module.
 
     use Acme::MadokaMagica;
 
-    my($madoka,$homura,$mami,$kyouko,$sayaka) = Acme::MadokaMagica->main_members;
+      my($madoka,$homura,$mami,$kyouko,$sayaka) = Acme::MadokaMagica->main_members;
 
-    print $madoka->name;         # '鹿目 まどか';
-    print $madoka->firstname;    # 'まどか';
-    print $madoka->lastname;     # '鹿目';
-    print $madoka->age;          #  14;
-    print  $madoka->birthday;    #  '10/3';
-    print  $madoka->blood_type;  #  'A';
-    print  $madoka->cv;          # '悠木碧';
-    print  $madoka->say;         #   'ウェヒヒww';
-    print  $madoka->color;       #   'Pink';
-    print  $madoka->qb;
-    print  $madoka->name;        # 'Kriemhild_Gretchen';
-    print  $madoka->color;       #   'black';
+      print $madoka->name;         # '鹿目 まどか';
+      print $madoka->firstname;    # 'まどか';
+      print $madoka->lastname;     # '鹿目';
+      print $madoka->age;          #  14;
+      print  $madoka->birthday;    #  '10/3';
+      print  $madoka->blood_type;  #  'A';
+      print  $madoka->cv;          # '悠木碧';
+      print  $madoka->say;         #   'ウェヒヒww';
+      print  $madoka->color;       #   'Pink';
+      print  $madoka->qb;
+      print  $madoka->name;        # 'Kriemhild_Gretchen';
+      print  $madoka->color;       #   'black';
 
-    my ($mami) = Acme::MadokaMagica->alone_members;
-    print $mami->say; #ティロ・フィナーレ
+      my ($mami) = Acme::MadokaMagica->alone_members;
+      print $mami->say; #ティロ・フィナーレ
 
-    my ($kyoko,$sayaka) = Acme::MadokaMagica->members_of($Acme::MadokaMagica::KyoSaya);
+      my ($kyoko,$sayaka) = Acme::MadokaMagica->members_of($Acme::MadokaMagica::KyoSaya);
 
-    print $kyoko->say; #'喰うかい?';
-    $sayaka->qb;
-    print $sayaka->name; #'Oktavia_Von_Seckendorff'
-
+      print $kyoko->say; #'喰うかい?';
+      $sayaka->qb;
+      print $sayaka->name; #'Oktavia_Von_Seckendorff'
 
 # DESCRIPTION
 

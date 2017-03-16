@@ -2,6 +2,9 @@ Revision history for Perl extension Acme-MadokaMagica
 
 {{$NEXT}}
 
+0.07 2017-03-16T11:12:20Z
+    - add a limit 100 line for soul gem
+
 0.06 2017-03-11T01:00:18Z
     - use methods
 

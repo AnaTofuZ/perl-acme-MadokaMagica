@@ -1,5 +1,5 @@
 {
-   "abstract" : "It's new $module",
+   "abstract" : "It's miracles and magic are real module.",
    "author" : [
       "@ie.u-ryukyu.ac.jp>"
    ],
@@ -67,9 +67,10 @@
          "web" : "https://github.com/AnaTofuZ/perl-acme-MadokaMagica"
       }
    },
-   "version" : "0.06",
+   "version" : "0.07",
    "x_contributors" : [
-      "AnaTofuZ <e155730@ie.u-ryukyu.ac.jp>"
+      "papix <mail@papix.net>",
+      "Anagura <e155730@ie.u-ryukyu.ac.jp>"
    ],
    "x_serialization_backend" : "JSON::PP version 2.27300"
 }
