@@ -35,6 +35,8 @@ Acme::MadokaMagica - It's miracles and magic are real module.
 
 MadokaMagica is one of the most famouse Japanese TV animation.
 This animation is magical girl heartful story.
+When you leave 100 lines, the soul gem makes it impossible to use method.
+
 It was in reference Acme::PriPara (C)htk291.
 
 # LICENSE

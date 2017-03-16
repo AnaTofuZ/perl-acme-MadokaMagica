@@ -26,6 +26,7 @@ subtest 'Team' => sub {
         is $kyouko->say, '喰うかい?';
         ok $sayaka->qb;
         is $sayaka->name, 'Oktavia_Von_Seckendorff';
+        is $homura->say,'それには及ばないわ';
     };
 
     subtest 'Kyosaya' => sub{
