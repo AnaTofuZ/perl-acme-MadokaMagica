@@ -10,7 +10,6 @@ subtest 'Team' => sub {
         my ($mami) = Acme::MadokaMagica->alone_members;
 
         is ref $mami, 'Acme::MadokaMagica::TvMembers::TomoeMami';
-        diag explain $mami;
     };
 
     subtest 'Main Members' => sub{
@@ -26,8 +25,8 @@ subtest 'Team' => sub {
         is $mami->color, 'yellow';
         is $kyouko->say, '喰うかい?';
         ok $sayaka->qb;
-        diag explain $sayaka;
         is $sayaka->name, 'Oktavia_Von_Seckendorff';
+        is $homura->say,'それには及ばないわ';
     };
 
     subtest 'Kyosaya' => sub{

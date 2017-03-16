@@ -142,7 +142,7 @@ sub BUILD {
     if (defined $args->{line}) {
         $self->{startline} = $args->{line};
     } else {
-        $self->{startline} = 0;
+        $self->{startline} = (caller)[2];
     }
 }
 
