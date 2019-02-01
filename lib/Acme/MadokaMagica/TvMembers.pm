@@ -42,7 +42,6 @@ sub name {
     my $line = (caller)[2];
 
     my $limit = $self->{startline} +100;
-    print "$line : $limit\n";
     if( $line >= $limit ) {
         return undef;
     }

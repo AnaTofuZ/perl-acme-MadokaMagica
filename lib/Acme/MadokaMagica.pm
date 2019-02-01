@@ -5,7 +5,7 @@ use warnings;
 use utf8;
 use parent 'Exporter';
 
-our $VERSION = "0.08";
+our $VERSION = "0.09";
 our $miracle = "奇跡";
 our $magical = "魔法";
 
