@@ -1,14 +1,14 @@
 package Acme::MadokaMagica::TvMembers;
-
+use strict;
+use warnings;
 use utf8;
 use Data::Section::Simple;
 use YAML::Tiny;
 
 sub new {
-    my ($class, $args) = @_;
+    my ($class, %args) = @_;
 
     my $self = { _has_qb => undef };
-
     my $ds = Data::Section::Simple->new($class);
     my $sections = $ds->get_data_section;
     for my $section_name ( keys %{$sections} ) {
@@ -18,8 +18,8 @@ sub new {
             $self->{$key} = $member_info->{$key};
         }
     }
-    if (defined $args->{line}) {
-        $self->{startline} = $args->{line};
+    if (defined $args{line}) {
+        $self->{startline} = $args{line};
     } else {
         $self->{startline} = (caller)[2];
     }
@@ -42,6 +42,7 @@ sub name {
     my $line = (caller)[2];
 
     my $limit = $self->{startline} +100;
+    print "$line : $limit\n";
     if( $line >= $limit ) {
         return undef;
     }

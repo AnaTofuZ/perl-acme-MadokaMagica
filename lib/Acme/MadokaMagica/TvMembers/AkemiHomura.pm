@@ -1,5 +1,7 @@
 package Acme::MadokaMagica::TvMembers::AkemiHomura;
 use parent qw/Acme::MadokaMagica::TvMembers/;
+use strict;
+use warnings;
 use utf8;
 
 

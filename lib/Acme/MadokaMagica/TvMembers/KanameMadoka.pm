@@ -1,5 +1,7 @@
 package Acme::MadokaMagica::TvMembers::KanameMadoka;
 use parent 'Acme::MadokaMagica::TvMembers';
+use strict;
+use warnings;
 use utf8;
 
 
