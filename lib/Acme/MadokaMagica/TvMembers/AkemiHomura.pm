@@ -1,9 +1,7 @@
 package Acme::MadokaMagica::TvMembers::AkemiHomura;
-use Mouse;
-extends 'Acme::MadokaMagica::TvMembers';
+use parent qw/Acme::MadokaMagica::TvMembers/;
 use utf8;
 
-no Mouse;
 
 1;
 
