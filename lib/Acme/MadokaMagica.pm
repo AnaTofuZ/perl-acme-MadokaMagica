@@ -52,14 +52,14 @@ sub main_members {
 }
 
 sub members_of {
-    my ($self, $team, $line) = @_;
+    my ($self, $team) = @_;
+    my $line = shift or  (caller)[2];
     my @members;
 
     for my $member_name (@{ $team }){
         my $pkg = "Acme::MadokaMagica::TvMembers::$member_name";
         if (eval "require $pkg;1;"){
-#            push @members,$pkg->new($line);
-            push @members,$pkg->new({"line" => $line});
+            push @members,$pkg->new("line" => $line);
         }
     }
 
