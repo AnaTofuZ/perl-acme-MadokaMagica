@@ -5,7 +5,7 @@ use warnings;
 use utf8;
 use parent 'Exporter';
 
-our $VERSION = "0.07";
+our $VERSION = "0.08";
 our $miracle = "奇跡";
 our $magical = "魔法";
 
@@ -54,7 +54,6 @@ sub main_members {
 sub members_of {
     my ($self, $team) = @_;
     my $line = $_[2] ||  (caller)[2];
-    print "$line\n";
     my @members;
 
     for my $member_name (@{ $team }){
